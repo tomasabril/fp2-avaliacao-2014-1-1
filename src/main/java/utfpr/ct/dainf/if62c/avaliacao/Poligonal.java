@@ -20,12 +20,13 @@ public class Poligonal {
      * @param n O número de vértices da poligonal
      */
     public Poligonal(int n) {
+	n++;
 	vertices = new Ponto[n];
-	for(int i=0; i<=n; i++) {
+	for(int i=0; i<n; i++) {
 	    this.vertices[i] = new Ponto(0,0); } }
 
     public Ponto getVertice(int i) {
-        if(i>=0 && i<=vertices.length) {
+        if(i>=0 && i<vertices.length) {
             return vertices[i]; }
         else {
             return null; } }
@@ -40,7 +41,7 @@ public class Poligonal {
     
     public double getArea() {
         double area=0;
-        for(int i=1; i <= this.vertices.length; i++) {
+        for(int i=1; i < this.vertices.length; i++) {
             area += ( this.vertices[i].getX() - this.vertices[i-1].getX() )
               *( this.vertices[i].getY() - this.vertices[i-1].getY() ); }
         area = Math.abs(area)/2;
@@ -48,7 +49,7 @@ public class Poligonal {
     
     public double getPerimetro() {
         double per=0;
-        for(int i=1; i <= this.vertices.length; i++) {
+        for(int i=1; i < this.vertices.length; i++) {
             per += Math.pow((this.vertices[i].getX() - this.vertices[i-1].getX() ), 2)
               + Math.pow(( this.vertices[i].getY() - this.vertices[i-1].getY() ), 2);
             per= Math.sqrt(per); }

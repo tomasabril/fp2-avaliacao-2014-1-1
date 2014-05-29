@@ -28,7 +28,7 @@ public class Avaliacao1 {
         polig.setVertice(1, 1, 1);
         polig.setVertice(2, 9, 1);
         polig.setVertice(3, 6, 3);
-        
+	polig.setVertice(4, 3, 3);
 	
         System.out.println("area: " + polig.getArea() );
         System.out.println("perimetro: " + polig.getPerimetro() );
