@@ -43,7 +43,7 @@ public class Poligonal {
         double area=0;
         for(int i=1; i < this.vertices.length; i++) {
             area += ( this.vertices[i].getX() - this.vertices[i-1].getX() )
-              *( this.vertices[i].getY() - this.vertices[i-1].getY() ); }
+              *( this.vertices[i].getY() + this.vertices[i-1].getY() ); }
         area = Math.abs(area)/2;
         return area; }
     
