@@ -32,12 +32,14 @@ public class Poligonal {
             return null; } }
     
     public void setVertice(int i, double xn, double yn) {
-        this.vertices[i].setXY(xn, yn); }
+        if(i>=0 && i<vertices.length) {
+	    this.vertices[i].setXY(xn, yn); } }
     
     public void setVertice(int i, Ponto vertice) {
-        double x = vertice.getX();
-        double y = vertice.getY();
-        vertices[i].setXY(x, y); }
+	if(i>=0 && i<vertices.length) {
+		double x = vertice.getX();
+		double y = vertice.getY();
+		vertices[i].setXY(x, y); } }
     
     public double getArea() {
         double area=0;
