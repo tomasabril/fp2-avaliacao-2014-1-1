@@ -41,5 +41,6 @@ public class Ponto {
         s.append(this.x);
         s.append(", ");
         s.append(this.y);
+	s.append(")");
         return s.toString(); }   
 }
