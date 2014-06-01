@@ -52,40 +52,10 @@ public class Poligonal {
     public double getPerimetro() {
         double per=0;
         for(int i=1; i < this.vertices.length; i++) {
-            per += Math.pow((this.vertices[i].getX() - this.vertices[i-1].getX() ), 2)
-              + Math.pow(( this.vertices[i].getY() - this.vertices[i-1].getY() ), 2);
-            per= Math.sqrt(per); }
+            per += Math.sqrt( Math.pow((this.vertices[i].getX() 
+	       - this.vertices[i-1].getX() ), 2)
+              + Math.pow(( this.vertices[i].getY() 
+	       - this.vertices[i-1].getY() ), 2) ); }
         return per; }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
